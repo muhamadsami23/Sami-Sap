@@ -4,12 +4,14 @@ import StudentDashboard from './StudDashboard'; // Adjust the import path as nec
 import AttendancePage from './AttendancePage'; // Import the Attendance Page component
 import SchedulePage from './Timetable'; // Import the Schedule Page component
 import GradePage from './Grades';
+import CoursePage from './CoursePage';
+import AssginmentPage from './AssignmentPage';
 import app from '../../App';
 
 const StudentPage = () => {
-  const [currentPage, setCurrentPage] = useState<'dashboard' | 'attendance' | 'schedule' | 'grades'>('dashboard');
+  const [currentPage, setCurrentPage] = useState<'dashboard' | 'attendance' | 'schedule' | 'grades' | 'courses' | 'assignments'>('dashboard');
 
-  const handlePageChange = (page: 'dashboard' | 'attendance' | 'schedule' | 'grades') => {
+  const handlePageChange = (page: 'dashboard' | 'attendance' | 'schedule' | 'grades'| 'courses' | 'assignments') => {
     setCurrentPage(page);
   };
   const handleLogout = () => {
@@ -31,6 +33,9 @@ const StudentPage = () => {
         {currentPage === 'attendance' && <AttendancePage />} {/* Render the AttendancePage component */}
         {currentPage === 'schedule' && <SchedulePage />} {/* Render the SchedulePage component */}
         {currentPage === 'grades' && <GradePage />}
+        {currentPage === 'courses' && <CoursePage />}
+        {currentPage === 'assignments' && <AssginmentPage />}
+
       </div>
       <div className="fixed bottom-4 right-4">
         <button

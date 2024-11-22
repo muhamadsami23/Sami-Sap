@@ -11,8 +11,11 @@
     "paths": {
       "sweetalert2": ["node_modules/sweetalert2/dist/sweetalert2.js"],
       "react-router-dom": ["node_modules/react-router-dom"],
-      "framer-motion": ["node_modules/framer-motion/dist/framer-motion"]
+      "framer-motion": ["node_modules/framer-motion/dist/framer-motion"],
+      "axios": ["node_modules/axios/index"],
+      "date-fns": ["node_modules/date-fns/index"] // Added this line
     }
   },
   "include": ["src/**/*"]
 }
+

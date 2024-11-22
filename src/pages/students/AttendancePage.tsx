@@ -9,7 +9,7 @@ interface Course {
 
 interface AttendanceRecord {
   lectureNo: number;
-  date: string;
+  attendance_date: string;
   duration: number;
   status: 'Present' | 'Absent';
 }
@@ -19,7 +19,7 @@ const generateAttendance = (): AttendanceRecord[] => {
   for (let i = 1; i <= 10; i++) {
     records.push({
       lectureNo: i,
-      date: `2024-08-${i + 18}`,
+      attendance_date: `2024-08-${i + 18}`,
       duration: 1,
       status: Math.random() > 0.2 ? 'Present' : 'Absent',
     });
@@ -170,14 +170,13 @@ const AttendancePage: React.FC = () => {
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
               <div className="flex items-center">
                 <Calendar className="h-4 w-4 mr-2 text-gray-400" />
-                {attendance.date ? new Date(attendance.date).toLocaleDateString() : "N/A"} {/* Attendance Date */}
+                {attendance.attendance_date ? new Date(attendance.attendance_date).toLocaleDateString() : "N/A"} {/* Attendance Date */}
               </div>
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
               <div className="flex items-center">
                 <Clock className="h-4 w-4 mr-2 text-gray-400" />
-                {attendance.duration} {/* Duration of Lecture */}
-              </div>
+1              </div>
             </td>
             <td className="px-6 py-4 whitespace-nowrap">
               <span
