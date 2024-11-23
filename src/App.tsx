@@ -7,6 +7,7 @@ import StudentPage from './pages/students/StudentPage';
 import TeacherPage from './pages/teacher/TeacherPage';
 import AdminPage from './pages/admin/adminPage';
 
+
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [role, setRole] = useState<string | null>(null);
