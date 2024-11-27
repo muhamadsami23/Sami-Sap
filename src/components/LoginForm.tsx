@@ -136,7 +136,7 @@ export default function Login({ onLogin }: LoginFormProps) {
               confirmButtonColor: '#10B981',
           }).then(() => {
               // Redirect to home page if needed
-              window.location.href = '/helphome';
+              window.location.href = '/admin';
           });
       }
   
